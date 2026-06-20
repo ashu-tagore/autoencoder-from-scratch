@@ -1,0 +1,26 @@
+[project]
+name = "autoencoder-from-scratch"
+version = "0.1.0"
+description = "Educational from-scratch autoencoder on MNIST"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "torch>=2.5.0",
+    "torchvision",
+    "numpy",
+    "matplotlib",
+    "scikit-learn",
+    "plotly",
+    "jupyter",
+    "ipykernel",
+    "kaleido>=1.3.0",
+    "pandas>=3.0.3",
+]
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu124" }]
+torchvision = [{ index = "pytorch-cu124" }]
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
